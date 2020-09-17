@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09</title>
+</head>
+<body>
+    
+    <button onclick="Corinthians()" style="background-color: black; color: blanchedalmond;">Diga algo sobre o Corinthians</button>
+    <br>
+    <button onclick='Palmeiras()'style="background-color: chartreuse; color: cornsilk;">Diga algo sobre o Palmeiras</button>
+    <br>
+    <button onclick="Santos()" style="background-color: white; color: black;">Diga algo sobre o Santos</button>
+    <br>
+    <button onclick="São_Paulo()" style="background-color: red; color:black">Diga algo sobre o São Paulo</button> 
+   <br><br><img id="img_times" src="" style="width: 200px"; float="right";>
+</body>
+</html>
+
+<script>
+    function Corinthians() {
+        alert ('Salve o Corinthians...');
+        document.title = 'THE_BEST';
+        img_times.src ='https://s2.glbimg.com/ORue34CPbQBoBuXgVXEZ07AOBxQ=/0x0:912x516/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2018/j/N/JZANC5QiaiPm9r4jEGrQ/corinthians.jpeg'; 
+    }
+    function Palmeiras() {
+        alert('Quando surge o alviverde imponente...');
+        document.title = 'Porco :(';
+        img_times.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmt7-7mQ86bjL5PUR_AIVqb0fy17S7zPYwuA&usqp=CAU';
+    }
+    function Santos() {
+        alert('Santos sempre Santos...');
+        document.title = 'Baleia';
+        img_times.src = 'https://s2.glbimg.com/hgVd-egVdwFVJAa1HlR3Xb8CyYM=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/9/J/JE2YdaSwWWkHYyvDhSIw/escudosantos02.jpg';
+    }
+    function São_Paulo() {
+        alert('Salve o tricolor paulista...');
+        document.title = 'Veado';
+        img_times.src = 'https://pbs.twimg.com/profile_images/1095375753057837056/q1HxQ3WV.jpg';
+    }
+</script>

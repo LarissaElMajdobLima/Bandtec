@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício19</title>
+</head>
+<body>
+    <img id='guerreiro1'src="https://lh3.googleusercontent.com/k912m_KO0sr-_I8bnQMNF6PuphjUf0GZDF9qXFJIsvVNhDIC1SQY8-IwuX_HUEXI-zburw=s85" style="height:100px;">
+    <br>ki base do Guerreiro Sayajin: 2000
+    <br><button onclick="SSJ()">Tranformar em SSJ</button>
+    <button onclick="SSJ2()">Transformar em SSJ2</button>
+    <button onclick="SSJ3()">Transformar em SSJ3</button>
+    <button onclick="Voltar()">Voltar para a forma Base</button>
+    <div id="transformacoes"></div>
+</body>
+</html>
+
+
+<script>
+    function SSJ() {
+       transformacoes.innerHTML ='<span style="color:darkblue;">ki na forma SSJ: 100000</span>';
+       guerreiro1.src ='https://lh3.googleusercontent.com/GuAhit-qCrmwzZYilYvJms9azkYqLNWLXP-rMLlviI5pSchR7vfwROqVWua2rOejhIjxYA=s85' 
+    }
+    function SSJ2() {
+        transformacoes.innerHTML = '<span style="color:yellow; background-Color: blue;">ki na forma SSJ2: 200000</span>';
+        guerreiro1.src = 'https://lh3.googleusercontent.com/sSMr0y-FEWcjApmEcJ2d3LdgfO7Zbt8Dmxm9hhRZSMlLbb1gAnbaFezJ8gPqN6IFtLMeKA=s85'  
+    }
+    function SSJ3() {
+        transformacoes.innerHTML = '<span style="color:orange; background-Color: yellow;">ki na forma SSJ3: 400000</span>';
+        guerreiro1.src = 'https://lh3.googleusercontent.com/9XXMjEsbn25iJ2Zy3uhwgzN4TLMMjJ6Yt6JKZH_X-8NZYcUmV20D49tqLhUV4LTqCWCt=s85' 
+    }
+    function Voltar() {
+        transformacoes.innerHTML = '';
+        guerreiro1.src ='https://lh3.googleusercontent.com/k912m_KO0sr-_I8bnQMNF6PuphjUf0GZDF9qXFJIsvVNhDIC1SQY8-IwuX_HUEXI-zburw=s85' 
+    }
+</script>
+
+    

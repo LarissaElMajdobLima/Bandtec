@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuada 1-Larissa Lima</title>
+</head>
+<body>
+    <h1 style="color: red ;"> $ Empréstimo Bancário $</h1><br>
+    <b>Qual é o valor do empréstimo?</b> <input id="valor1"></input> <br>
+    <b>Qual é o percentual cobrado em juros? <input id="valor2"></input> <br>
+    
+    <button onclick="Valor_total()">Calcular valor total</button><br>
+    <button onclick="Parcelas()">Calcular parcelas</button><br>
+    <div id="div_valores">Resultados</div>
+</body>
+</html>
+
+<script>
+    function Valor_total() {
+        var multiplicar = (Number(valor1.value) + (valor1.value * valor2.value / 100));
+        div_valores.innerHTML += `<br><b> O valor com juros será de: R$ </b> ${multiplicar}`;
+    }
+</script>

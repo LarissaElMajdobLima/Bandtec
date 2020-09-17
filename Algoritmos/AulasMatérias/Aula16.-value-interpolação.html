@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula16</title>
+</head>
+<body>
+    <h2>Mini cadastro</h2>
+    Seu nome: <input id="in_nome"><br>
+    Seu bairro: <input id="in_bairro"><br>
+    <input id="in_idade" placeholder="Sua idade"><br>
+    <input type="text" id="in_telefone"><br>
+    <button onclick="cadastrar()">
+        Fazer cadastro
+    </button>
+    <button onclick="cadastrar_bonitinho()">
+        Fazer cadastro bonitinho
+    </button>
+    <button onclick="cadastrar_Lindo()">
+        Fazer cadastro Lindo!
+    </button>
+    <div id="div_cadastro"></div>
+</body>
+</html>
+
+<Script>
+    function cadastrar() {
+        alert(in_nome.value);
+        alert(in_bairro.value);
+        alert(in_idade.value);
+        alert(in_telefone.value);
+    }
+    function cadastrar_bonitinho() {
+        alert(`você se chama ${in_nome.value} `);
+        alert(`você mora em  ${in_bairro.value} `);
+        alert(`você tem ${in_idade.value} anos `);
+        alert(`seu número de telefone é ${in_telefone.value} `);
+        alert(`Cadastro: ${in_nome.value}, que mora em ${in_bairro.value}, tem ${in_idade.value} e com número de telefone igual a ${in_telefone.value}`);
+    }
+    function cadastrar_Lindo() {
+        div_cadastro.innerHTML = `
+        Nome cadastrado: <b>${in_nome.value}</b> <br>
+        Bairro cadastrado: <b>${in_bairro.value}</b> <br>
+        Idade cadastrada: <b style="color:red;">${in_idade.value}</b> <br>
+        Telefone cadastrado: <b> ${in_telefone.value}</b>
+        `;
+    }
+</Script>

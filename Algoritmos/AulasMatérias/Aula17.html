@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula17</title>
+</head>
+<body>
+    <h1 style="color: red;">Calculando...</h1>
+    <b>Primeiro número:</b> <input id="in_n1"></input><br>
+    <b>Segundo número:</b>  <input id="in_n2"></input><br><br>
+
+    <button onclick="Somar()">Somar</button><br>
+    <button onclick= "Subtrair()">Subtrair</button><br>
+    <button onclick="Multiplicar()">Multiplicar</button><br>
+    <button onclick="Dividir()">Dividir</button><br>
+    <button onclick="Elevar()">Potência</button><br><br>
+    <div id="div_resultado"><b style="color: red;">Resultados</b></div><br><br>
+</body>
+</html>
+
+<script>
+    function Somar() {
+        var soma = Number(in_n1.value) + Number(in_n2.value);
+        div_resultado.innerHTML += `<br><b>Soma:</b> ${soma}`;
+    }
+    function Subtrair() {
+        var subtracao = in_n1.value - in_n2.value;
+        div_resultado.innerHTML += `<br><b>Subtração:</b> ${subtracao}`;
+    }
+    function Multiplicar() {
+        var multiplicar = in_n1.value * in_n2.value;
+        div_resultado.innerHTML += `<br><b>Multiplicação:</b> ${multiplicar}`;   
+    }
+    function Dividir() {
+        var dividir = in_n1.value / in_n2.value;
+         div_resultado.innerHTML += `<br><b>Divisão:</b> ${dividir}`;
+    }
+    function Elevar() {
+        var elevar = in_n1.value ** in_n2.value;
+        div_resultado.innerHTML += `<br><b>Potência:</b> ${elevar}`;
+    }
+</script>

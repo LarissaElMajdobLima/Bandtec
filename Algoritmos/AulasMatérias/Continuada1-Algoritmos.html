@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="port -br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continuada1-Larissa Lima</title>
+</head>
+<body>
+    <h1 style="color: rgb(6, 230, 218);">Calculando Áreas...</h1>
+
+    <b style="color:red;">Triângulo</b><br>
+    <i>Valor da Base:</i> <input id="in_base1"></input><br>
+    <i>Valor da Altura:</i> <input id="in_altura1"></input><br>
+    <button onclick="area_T()" style="background-color: black; color: white;">Calcular área</button>
+    <button onclick="Limpar_valores1()" style="background-color: black; color: white;">Limpar Valores</button><br>
+    <br><b style="color: blue;">Quadrado</b><br>
+    <i>Valor do Lado:</i> <input id="in_lado1"></input><br>
+    <button onclick="area_Q()" style="background-color: black; color: white;">Calcular área</button>
+    <button onclick="Limpar_valores2()" style="background-color: black; color: white;">Limpar Valores</button><br>
+    <br><b style="color: green;">Retângulo</b><br>
+    <i>Valor da Altura:</i> <input id="in_altura2"></input><br>
+    <i>Valor da Base:</i>  <input id="in_base2"></input><br>
+    <button onclick="area_R()" style="background-color: black; color: white;">Calcular área</button>
+    <button onclick="Limpar_valores3()" style="background-color: black; color: white;">Limpar Valores</button><br>
+    <br><b style="color: rgb(137, 12, 209);">Resultados</b>
+    <br><div id="div_resultados"></div><br>
+    <br><br> <button onclick="Recomecar()" style="background-color: black; color: white;">Recomeçar Cálculos</button>
+</body>
+</html>
+
+<script>
+    function area_T() {
+        var multiplicar = Number(in_base1.value) * Number(in_altura1.value) / 2
+        div_resultados.innerHTML += `<br><b>A área do</b><b style="color: red;"> triângulo</b><b> é:</b> ${multiplicar}`;
+    }
+    function area_Q() {
+        var elevar = Number(in_lado1.value) ** Number(2);
+        div_resultados.innerHTML += `<br><b>A área do</b><b style="color: blue;"> quadrado</b><b> é:</b> ${elevar}`;
+    }
+    function area_R() {
+        var multiplicar = Number(in_altura2.value) * Number(in_base2.value);
+        div_resultados.innerHTML += `<br><b>A área do</b><b style="color: green;"> retângulo</b><b> é:</b> ${multiplicar}`;
+    }
+    function Limpar_valores1() {
+        in_altura1.value = '';
+        in_base1.value = '';
+    }
+    function Limpar_valores2() {
+        in_lado1.value = '';
+    }
+    function Limpar_valores3() {
+        in_altura2.value = '';
+        in_base2.value = '';
+    }
+    function Recomecar() {
+        div_resultados.innerHTML = '';
+    }
+</script>

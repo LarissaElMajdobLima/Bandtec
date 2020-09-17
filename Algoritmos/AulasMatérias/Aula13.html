@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula14</title>
+</head>
+<body>
+
+    <h3>Mudança de Tempo</h3>
+    <button onclick="nublado()">Mudar para nublado</button>
+    <button onclick="ensolarado()">Mudar para ensolarado</button>
+    <br>
+    <img id='img_clima' src="" style="width: 500px;">
+</body>
+</html>
+
+<script>
+    function nublado() {
+        img_clima.src = 'https://emc-src.eptv.com.br/dbimagens/tempo_em_790x444_14012020063102.jpg';
+    }
+    function ensolarado () {
+        img_clima.src = 'https://www.osmais.com/wallpapers/201305/dia-ensolarado-wallpaper.jpg';
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício21</title>
+</head>
+<body>
+    <h1>Semáforos</h1>
+    <div style= "width: 100px; background-color: black";>
+        <img onclick='Vermelho()' id="vermelho" src="https://images.emojiterra.com/google/android-10/512px/1f534.png" style="width: 100px;">
+        <img onclick="Amarelo()" id="amarelo" src="https://www.logolynx.com/images/logolynx/e1/e12d173c25ba064cd541feff6527562c.png" style="width: 100px;">
+        <img onclick="Verde()" id="verde" src="https://images.emojiterra.com/twitter/v13.0/512px/1f7e2.png" style="width: 100px;">
+    </div>  
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function Vermelho() {
+        mensagem.innerHTML ='<br><span style="background-color:red; color:white;">Pare! Aguarde o verde!</span>';
+        vermelho.src="https://images.emojiterra.com/twitter/512px/1f534.png";
+        amarelo.src="https://www.logolynx.com/images/logolynx/e1/e12d173c25ba064cd541feff6527562c.png"; 
+        verde.src ="https://images.emojiterra.com/twitter/v13.0/512px/1f7e2.png"; 
+    ;}
+    function Amarelo() {
+        mensagem.innerHTML ='<br><span style="background-color:orange; color:black;">Só siga se estiver perto e rápido.</span>';
+        vermelho.src="https://images.emojiterra.com/google/android-10/512px/1f534.png"; 
+        amarelo.src="https://images.emojiterra.com/google/android-10/512px/1f7e1.png"; 
+        verde.src ="https://images.emojiterra.com/twitter/v13.0/512px/1f7e2.png"; 
+    ;}
+    function Verde() {
+        mensagem.innerHTML ='<br><span style="background-color:green; color:white;">Siga :)</span>';
+        vermelho.src="https://images.emojiterra.com/google/android-10/512px/1f534.png"; 
+        amarelo.src="https://www.logolynx.com/images/logolynx/e1/e12d173c25ba064cd541feff6527562c.png"; 
+        verde.src="https://images.emojiterra.com/google/android-10/512px/1f7e2.png";
+    }
+</script>
+    

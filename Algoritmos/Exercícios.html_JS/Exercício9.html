@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício10</title>
+</head>
+<body>
+    <button onclick="Carnes()">Carnes</button>
+    <button onclick="Legumes()">Legumes</button>
+    <button onclick="Frutas()">Frutas</button>
+    <div id="mensagem" style="background-color:'' ; color:'' ; width: '200px' ";></div>
+</body>
+</html>
+
+<script>
+    function Carnes() {
+        mensagem.innerHTML = 'Proteínas';
+        mensagem.style.color = 'white'; mensagem.style.backgroundColor = 'red';
+        document.title = 'Último clique: Botão de Carnes';
+    }
+    function Legumes() {
+        mensagem.innerHTML = 'Cálcio/Ferro';
+        mensagem.style.color ='yellow'; mensagem.style.backgroundColor ='black';
+        document.title = 'Último clique: Botão de Legumes';
+    }
+    function Frutas(){
+        mensagem.innerHTML = 'Vitaminas';
+        mensagem.style.color ='green'; mensagem.style.backgroundColor ='white';
+        document.title = 'Último clique: Botão de Frutas';
+    }
+</script>

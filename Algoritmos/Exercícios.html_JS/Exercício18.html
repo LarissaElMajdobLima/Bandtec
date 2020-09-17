@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício18</title>
+</head>
+<body>
+    ki base do Guerreiro Sayajin: 2000
+    <br><button onclick="SSJ()">Tranformar em SSJ</button>
+    <button onclick="SSJ2()">Transformar em SSJ2</button>
+    <button onclick="SSJ3()">Transformar em SSJ3</button>
+    <button onclick="Voltar()">Voltar para a forma Base</button>
+    <div id="transformacoes"></div>
+</body>
+</html>
+<script>
+    function SSJ() {
+       transformacoes.innerHTML ='<span style="color:darkblue;">ki na forma SSJ: 100000</span>';
+    }
+    function SSJ2() {
+        transformacoes.innerHTML = '<span style="color:yellow; background-Color: blue;">ki na forma SSJ2: 200000</span>';
+    }
+    function SSJ3() {
+        transformacoes.innerHTML = '<span style="color:orange; background-Color: yellow;">ki na forma SSJ3: 400000</span>';
+    }
+    function Voltar() {
+        transformacoes.innerHTML = '';
+    }
+</script>

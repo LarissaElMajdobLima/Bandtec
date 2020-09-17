@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula12</title>
+</head>
+<body>
+
+<h3>Limpando conteúdos de Tags</h3>
+
+Para o ser humano, temperaturas abaixo de <b id="b_fria">21ºC</b>, são <u id="u_fria">frias</u>
+<br>
+E, acima de <b id="b_quente">24ºC</b>, são <u id="u_quente">quentes</u>.
+<br>
+Entre <span id= "m_fria">21ºC</span>  e <span id="M_quente">24ºC</span>  é confortável.
+<br>
+<button onclick="esconder()">Esconder valores</button>
+    
+</body>
+</html>
+
+<script>
+    function esconder() {
+        b_fria.innerHTML = '___';
+        u_fria.innerHTML = '___';
+        b_quente.innerHTML = '___';
+        u_quente.innerHTML = '___';
+        m_fria.innerHTML = '___';
+        M_quente.innerHTML = '___';
+    }
+</script>

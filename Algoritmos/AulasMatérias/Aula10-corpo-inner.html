@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10</title>
+</head>
+<body>
+    
+<h1>"Fala que eu te escuto" Bandtec</h1>
+
+<button onclick="Falar_coisas_boas()">Falar coisas boas</button>
+<button onclick="fofocar()">Fofocar</button>
+<button onclick="falar_da_Bandtec()">Falar da Bandtec</button>
+
+<div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+
+    function Falar_coisas_boas(){
+        div_mensagem.innerHTML = 'Força, foco e fé!';
+    }
+
+    function fofocar() {
+        div_mensagem.innerHTML = 'O Yoshi faz cosplay do Caio Ribeiro!';
+    }
+
+    function falar_da_Bandtec() {
+        div_mensagem.innerHTML = 'O Thiago é muito alto! <br> A Marise é portuguesa! <br> Estamos aprendendo Javascript!';
+    }
+</script>

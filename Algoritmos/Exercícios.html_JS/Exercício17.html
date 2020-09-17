@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício17</title>
+</head>
+<body>
+    
+    <img id="Best" onclick="Corinthians()" src="https://http2.mlstatic.com/escudo-corinthians-30-x-39-cm-aluminiopintura-a-laser-D_NQ_NP_778536-MLB31671307546_082019-F.jpg" style="width: 100px; float: left;">
+    <div id="trofeus_C" style="float: left;"><img src=""></div>
+    
+    <img id="Porco" onclick="Palmeiras()" src="https://http2.mlstatic.com/escudo-palmeiras-30-x-39-cm-aluminiopintura-laser-D_NQ_NP_898825-MLB25518895579_042017-F.jpg" style="width: 100px; float: left;">
+    <div id="trofeus_P" style="float: left;"><img src=""></div>
+    
+    <img id="Baleia" onclick="Santos()" src="https://http2.mlstatic.com/escudo-santos-30-x-39-cm-aluminiopintura-a-laser-D_NQ_NP_396825-MLB25518895160_042017-F.jpg" style="width: 100px; float:left">
+    <div id="trofeus_S" style="float: left;"><img src=""></div>
+    
+  
+    <img id="Veado" onclick="Sao_Paulo()" src="https://http2.mlstatic.com/escudo-so-paulo-30-x-39-cm-aluminiopintura-laser-D_NQ_NP_317825-MLB25518891942_042017-F.webp" style="width: 100px; float: left;">
+    <div id="trofeus_SP" style="float: left;"><img src=""></div>   
+  
+    <button onclick="Resetar_programa()" id="Resetar" style="display: block;">Resetar Programa</button>
+    <button onclick="Esconder_escudos()" id="Esconder" style="display: block;">Esconder Escudos</button>
+    <button onclick="Mostrar_escudos()" id="Mostrar" style="display: none;">Mostrar Escudos</button>
+</div>
+</body>   
+</html>
+
+
+<script>
+    function Corinthians() {
+         trofeus_C.innerHTML= '<img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px;"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">'; 
+    }
+    function Palmeiras() {
+        trofeus_P.innerHTML = '<img src="https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2019/04/palmeiras-mundial.jpg" style="height:200px">';
+    }
+    function Santos() {
+        trofeus_S.innerHTML = '<img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">'; 
+    }
+    function Sao_Paulo() {
+        trofeus_SP.innerHTML = '<img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px"> <img src="https://i.pinimg.com/originals/1a/d6/5b/1ad65b315e150c4907b7bd6ffa247196.jpg" style="height:100px">'; 
+    }
+    function Resetar_programa() {
+        trofeus_C.innerHTML = "";
+        trofeus_P.innerHTML = "";
+        trofeus_S.innerHTML = "";
+        trofeus_SP.innerHTML = "";
+    }
+    function Esconder_escudos() {
+        Best.style.display = "none";
+        Porco.style.display= "none";
+        Baleia.style.display= "none";
+        Veado.style.display= "none";
+        Esconder.style.display= "none";
+        Mostrar.style.display ="block";
+    }
+    function Mostrar_escudos() {
+        Mostrar.style.display="none";
+        Esconder.style.display="block";
+        Best.style.display = "block";
+        Porco.style.display= "block";
+        Baleia.style.display="block";
+        Veado.style.display= "block";
+    }
+</script>
