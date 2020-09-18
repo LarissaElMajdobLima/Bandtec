@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Conversor</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: blueviolet;">Larissa's Machine</h1>
+
+    
+    <br><input id="decimal" placeholder="Valor em decimal"</input><br>
+    <br><b>Converter para:</b>
+
+    <br><br><button onclick="Binario()" style="background-color: black; color: white;">Binário(2)</button>
+    <br><div id="div_binario"></div>
+    <br><button onclick="Octal()" style="background-color: black; color: white;">Octal(8)</button>
+    <br><div id='div_octal'></div>
+    <br><button onclick="Hexadecimal()" style="background-color: black; color: white;">Hexadecimal(16)</button>
+    <br><div id='div_hexadecimal'></div>
+    </center>
+</body>
+</html>
+
+<script>
+    function Binario() {
+        var letbinario =  Number(decimal.value).toString(2); 
+        div_binario.innerHTML += `${letbinario}`;
+    }
+    function Octal() {
+        var letoctal = Number(decimal.value).toString(8);
+         div_octal.innerHTML = `${letoctal}`;
+    }
+    function Hexadecimal() {
+        var lethexadecimal = Number(decimal.value).toString(16);
+        div_hexadecimal.innerHTML = `${lethexadecimal}`;
+    }
+</script>
