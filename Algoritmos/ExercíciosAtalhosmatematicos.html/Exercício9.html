@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício9</title>
+</head>
+<body>
+    <h1>Contaminação do SkolVírus</h1>
+    Quantidade de pessoas atualmente infectadas: 
+    <br><input id="hoje"><br>
+    <br><button onclick="Ontem()">Quantas pessoas infectadas ontem</button>
+    <br><div id="resultado1"></div><br>
+    <br><button onclick="Amanha()">Quantas pessoas infectadas amanhã</button><br>
+    <div id="resultado2"></div><br>
+    <br><button onclick="um_mes()">Quantas pessoas infectadas daqui a 1 mês</button>
+    <br><div id="resultado3"></div>
+</body>
+</html>
+
+<script>
+    function Ontem() {
+        var Pessoas= Number(hoje.value);
+        Pessoas -= 35;
+        resultado1.innerHTML = `Ontem havia ${Pessoas} pessoas infectadas`;
+    }
+    function Amanha() {
+        var Pessoas= Number(hoje.value);
+        Pessoas += 35;
+        resultado2.innerHTML = `Amanhã haverá ${Pessoas} pessoas infectadas`;
+    }
+    function um_mes() {
+        var Pessoas= Number(hoje.value);
+        var Mes= Pessoas + (30*35);
+        resultado3.innerHTML = `Daqui a um mês haverá ${Mes} pessoas infectadas`;
+    }
+</script>

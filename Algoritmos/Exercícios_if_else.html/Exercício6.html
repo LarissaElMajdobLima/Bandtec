@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício6</title>
+</head>
+<body>
+    <h1>Peso na QUARENTENA</h1>
+
+    Quantos pães franceses você tem comido por dia?
+    <input id="pao">
+    <br>Quantos pacotes de bolacha recheada você tem comido por dia?
+    <input id="bolacha">
+    <br>Quantos copos de achocolatado você tem tomado por dia?
+    <input id="achocolatado">
+    <br><button onclick="Verificar()">Verificar calorias</button>
+    <br>
+    <div id="resultado"></div>
+    <img id="em_forma" src="https://lacompagniedelacroixnoire.e-monsite.com/medias/images/goji-top-e-bom.jpg" style="width: 450px ; display: none;">
+    <img id="acima_peso" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRO5YXD5O6ShFCiA4RuYCabUKYFI9FkiKFmIg&usqp=CAU" style="width: 450px; display: none;">
+    <img id="obeso" src="https://thumbs.dreamstime.com/z/mulher-gorda-e-homem-gordo-56929895.jpg" style="width: 450px ; display: none;">
+
+</body>
+
+</html>
+
+<script>
+   
+    function Verificar() {
+        Pao = Number(pao.value) * 50;
+        Bolacha = Number(bolacha.value) * 80;
+        Achocolatado = Number(achocolatado.value) * 70;
+        var Calcular = Number(Pao) + Number(Bolacha) + Number(Achocolatado);
+
+        if (Calcular < 200) {
+            resultado.innerHTML = '<br>Parabéns, vai sair em forma da quarentena!';
+            em_forma.style.display = "block";
+            acima_peso.style.display = "none";
+            obeso.style.display = "none";
+        } else if (Calcular <=400) {
+            resultado.innerHTML = '<br>Cuidado, vai ficar mais "fofinho(a)" após quarentena!';
+            acima_peso.style.display = "block";
+            em_forma.style.display = "none";
+            obeso.style.display = "none";
+        } else {
+            resultado.innerHTML = '<br>Bom, acho que muitos não vão te reconhecer após a quarentena';
+            obeso.style.display = "block";
+            em_forma.style.display = "none";
+            acima_peso.style.display = "none";
+
+        }
+    }
+</script>

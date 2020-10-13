@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício13</title>
+</head>
+<body>
+    <h1 style="color: rgb(204, 0, 255);">Streaming</h1>
+
+        Qual foi a última série que você assistiu?
+        <br><input id="in_serie" placeholder="SITCOM">
+        <br>Qual é a quantidade total de episódios que você já assistiu dessa série?
+        <br><input id="in_episodios"><br>
+        <br><button onclick="Verificar()">Verificar nível</button>
+        <br><div id="resposta"></div>
+    
+</body>
+</html>
+
+<script>
+    function Verificar() {
+        var Serie = (in_serie.value);
+        var Episodios = Number(in_episodios.value);
+        resposta.innerHTML = `<br>Vejo que você gosta da série ${Serie}`;
+        Tempo_minutos = Episodios * 22;
+        Tempo_horas = Tempo_minutos / 60;
+
+        if (Tempo_horas > 30) {
+            resposta.innerHTML += '<br>Uau, você realmente gosta dessa série!';
+        } 
+    }
+</script>

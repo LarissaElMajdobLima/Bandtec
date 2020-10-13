@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício10</title>
+</head>
+<body>
+    Valor da Renda Familiar: <input id="in_rf" placeholder="Em reais">
+    <br>Valor da Prestação: <input id="in_p" placeholder="Em reais">
+
+    <br><button onclick="Verificar()">Verificar Financiamento</button>
+    <br><div id="resposta"></div>
+    
+</body>
+</html>
+
+<script>
+    function Verificar() {
+        var RF = Number(in_rf.value);
+        var P = Number(in_p.value);
+        var Financiamento = (P / RF) * 100;
+        resposta.innerHTML += `<br>A prestação corresponde a ${Financiamento.toFixed(2)}% da Renda Familiar`;
+
+        if (Financiamento > 30) {
+            resposta.innerHTML += '<br><b style="color:red;">Será necessário complementar a renda familiar</b>';
+        }
+
+    }
+</script>

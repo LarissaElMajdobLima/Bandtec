@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício9</title>
+</head>
+<body>
+    Quantidade de luz consumida no mês:
+    <br><input id="in_luz" placeholder="Em kWh"><br>
+    <br><button onclick="Calcular()">Calcular conta de luz</button><br>
+    <br><div id="resposta"></div>
+    
+</body>
+</html>
+
+<script>
+    function Calcular() {
+        var Luz = Number(in_luz.value);
+        var Conta = Luz * 0.85;
+
+        if (Luz < 100) {
+            Conta = Conta * 0.9;
+        }
+       alert (`O valor a ser pago será de R$ ${Conta.toFixed(2)}`); 
+    }
+</script>

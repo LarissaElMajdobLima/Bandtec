@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="port-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício7</title>
+</head>
+<body>
+    <h1>Estações do ano e seus meses</h1>
+
+    <select id="Estacoes_meses">
+        <option value="https://cdn.vox-cdn.com/thumbor/i_DRXWOQKjX0dXrPMI6uPjtwqwo=/0x743:5111x3299/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19534013/583747376.jpg.jpg">Janeiro</option>
+        <option value="https://cdn.vox-cdn.com/thumbor/i_DRXWOQKjX0dXrPMI6uPjtwqwo=/0x743:5111x3299/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19534013/583747376.jpg.jpg">Fevereiro</option>
+        <option value="https://www.adirferreira.com.br/wp-content/uploads/2019/09/BerlinCherryBlossomGettyImages-736044561PhilippDase-5aa5394bfa6bcc0037c1f923.jpg">Março</option>
+        <option value="https://www.adirferreira.com.br/wp-content/uploads/2019/09/BerlinCherryBlossomGettyImages-736044561PhilippDase-5aa5394bfa6bcc0037c1f923.jpg">Abril</option>
+        <option value="https://www.adirferreira.com.br/wp-content/uploads/2019/09/BerlinCherryBlossomGettyImages-736044561PhilippDase-5aa5394bfa6bcc0037c1f923.jpg">Maio</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxZaxBxjXVjGeOQ_AjHLfTMXPLsVYnkKMToQ&usqp=CAU">Junho</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxZaxBxjXVjGeOQ_AjHLfTMXPLsVYnkKMToQ&usqp=CAU">Julho</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxZaxBxjXVjGeOQ_AjHLfTMXPLsVYnkKMToQ&usqp=CAU">Agosto</option>
+        <option value="https://cdn.mos.cms.futurecdn.net/Nxz3xSGwyGMaziCwiAC5WW.jpg">Setembro</option>
+        <option value="https://cdn.mos.cms.futurecdn.net/Nxz3xSGwyGMaziCwiAC5WW.jpg">Outubro</option>
+        <option value="https://cdn.mos.cms.futurecdn.net/Nxz3xSGwyGMaziCwiAC5WW.jpg">Novembro</option>
+        <option value="https://cdn.vox-cdn.com/thumbor/i_DRXWOQKjX0dXrPMI6uPjtwqwo=/0x743:5111x3299/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/19534013/583747376.jpg.jpg">Dezembro</option>
+    </select>
+    <br><button onclick="Ver()">Ver Estação correspondente</button>
+    <br><img id="img_estacoes" style="width: 400px;">
+    <br><div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function Ver() {
+        img_estacoes.src = Estacoes_meses.value;
+    }
+</script>
+

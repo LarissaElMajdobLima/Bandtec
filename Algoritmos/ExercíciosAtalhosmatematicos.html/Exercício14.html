@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício14</title>
+</head>
+<body>
+    <h1>MORTAL KOMBAT</h1>
+
+    <button onclick="Iniciar()">Iniciar jogo</button><br>
+
+    <br><img onclick="Lutador1()" id="L1" src="https://img.kalunga.com.br/fotosdeprodutos/672099z_4.jpg" style="display: none; width: 230px;">
+    <br><div id="barra_vida" style="display: none; background-color: rgb(160, 41, 41); height: 20px;"></div>
+    <span id="golpes1" style="display: none;">Golpes sofridos pelo lutador 1: <b>0</b></span><br>
+    <img onclick="Lutador2()" id="L2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfbBj5MsBEryM6LdoX7gnNGPFx1HOLHXFWTQ&usqp=CAU" style="display: none; width: 210px;">
+    <br><div id="barra_vida2" style="display: none; background-color:rgb(160, 41, 41);height: 20px;"></div>
+    <span id="golpes2" style="display: none;">Golpes sofridos pelo lutador 2: <b>0</b></span>
+
+</body>
+</html>
+
+<script>
+
+    function Iniciar() {
+        L1.style.display= "block";
+        barra_vida.style.display= "block";
+        golpes1.style.display= "block";
+        L2.style.display= "block";
+        barra_vida2.style.display= "block";
+        golpes2.style.display= "block";
+    }
+
+    var G1= 0;
+    var G2= 0;
+    var BV1= 100; 
+    var BV2 = 100;
+
+    function Lutador1() {
+        G1 ++;
+        golpes1.innerHTML = `Golpes sofridos pelo lutador 1: <b>${G1}</b>`;
+        BV1 -= 5; 
+        barra_vida.style.width = `${BV1}%`;
+
+    }
+    function Lutador2() {
+        G2 ++;
+        golpes2.innerHTML = `Golpes sofridos pelo lutador 2: <b>${G2}</b>`;
+        BV2 -= 5; 
+        barra_vida2.style.width = `${BV2}%`;
+    }
+</script>

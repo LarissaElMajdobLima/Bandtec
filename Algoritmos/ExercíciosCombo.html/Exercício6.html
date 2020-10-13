@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício6</title>
+</head>
+<body>
+    <h1>Temperatura Ambiental</h1>
+    <input id="in_temp" placeholder="Insira a temperatura do ambiente">
+    <br><button onclick="Medir()">Medir conforto</button>
+</body>
+</html>
+
+<script>
+    var Temp= 0;
+    function Medir() {
+        Temp= Number(in_temp.value);
+
+        if (Temp >= 22 && Temp <= 23) {
+            alert ('Temperatura confortável');
+        } else {
+            alert ('Temperatura não está confortável');
+        }
+    }
+</script>

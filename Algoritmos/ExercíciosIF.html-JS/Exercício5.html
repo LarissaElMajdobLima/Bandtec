@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício5</title>
+</head>
+<body>
+    <br>Qual foi a nota da P1?
+    <input id="in_p1">
+    <br>Qual foi a nota da P2?
+    <input id="in_p2">
+    <br>Qual foi a nota da P3?
+    <input id="in_p3"><br>
+    
+    <br><button onclick="Desempenho()">Analisar desempenho</button>
+    
+    <br><div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function Desempenho() {
+        var P1 = Number(in_p1.value);
+        var P2 = Number(in_p2.value);
+        var P3 = Number(in_p3.value);
+        var media = (P1 + P2 + P3) / 3;
+
+        resultado.innerHTML += `<br><b>Sua média foi de:</b> ${media.toFixed(2)}`;
+
+        if (media > 9.4) {
+            resultado.innerHTML += '<br><b>Parabéns, você é fora de série!</b>';
+        }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício8</title>
+</head>
+<body>
+    <h1>Qual a melhor forma de comprar um carro?</h1>
+
+    Valor do carro: <input id="valor_vista" placeholder="À vista"><br>
+    Taxa de juros cobrada: <input id="juros_mes" placeholder="Ao mês"><br>
+    Quantidade de parcelas: <input id="parcelas" placeholder="vezes"><br>
+    <br><button onclick="Calcular()">Calcular Prejú</button><br>
+    <br><div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+    var Valor= 0;
+    var Juros= 0;
+    var Parcelas= 0;
+    
+    function Calcular() {
+        Valor = Number (valor_vista.value);
+        Juros = Number (juros_mes.value);
+        Parcelas = Number (parcelas.value);
+
+        var primeiro_termo = (Valor/Parcelas);
+        var razao = (Juros/100) + 1;
+        
+        // an = a1⋅qn−1
+        // var TotalPago = [(Valor/Parcelas) * (((Juros/100)+1) ** (Parcelas - 1))];
+
+        // Sn = a1 (q** n) - 1)  /q - 1
+        var Prazo= primeiro_termo * ((razao ** Parcelas) - 1);
+        Prazo /= (razao - 1);
+
+        var Vista = Valor * 0.8;
+       
+        var Comparacao = Prazo / Vista;
+
+        resultado.innerHTML = `Seu carro vai sair por um total de <b>R$${Prazo.toFixed(2)}</b> .Após 1 mês, ele já vai valer apenas <B>R$${Vista.toFixed(2)}</b> 
+         .Porque comprou financiado, vai pagar o correspondente a <b>${Comparacao.toFixed(1)}</b> carros.`;
+    }
+</script>

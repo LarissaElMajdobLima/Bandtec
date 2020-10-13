@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício8</title>
+</head>
+<body>
+    <span id="qtd_cliques">Você já clicou <b>0</b> vezes</span>
+    <br><button onclick="Clicar()">Clica neu</button>
+    <br><div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+    var Cliques = 0;
+    function Clicar() {
+        Cliques ++;
+        qtd_cliques.innerHTML = `Você já clicou <b>${Cliques}</b> vezes`;
+        
+        if (Cliques < 5) {
+            resultado.innerHTML = '<br>Dedo fraquinho, hein';
+        } else if (Cliques <= 10) {
+            resultado.innerHTML = '<br>Dedo bom, mano'; 
+        } else if (Cliques <= 15){
+            resultado.innerHTML = '<br>Gosta de clicar, hein!';
+        } else {
+            resultado.innerHTML = '<br>Eita dedo nervoso!';
+        }
+    }
+</script>

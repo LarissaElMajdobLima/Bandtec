@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício14</title>
+</head>
+<body>
+    <input id="nota1" placeholder="Primeira nota">
+    <br>
+    <input id="nota2" placeholder="Segunda nota">
+    <br>
+    <br><button onclick="Avaliar()">Avaliar</button>
+    <div id="resposta"></div>
+</body>
+</html>
+
+<script>
+    function Avaliar() {
+        var N1= Number(nota1.value);
+        var N2= Number(nota2.value);
+        var Media= (N1 + N2) / 2;
+        resposta.innerHTML += `<br>A média é de: ${Media}`;
+
+        if (Media >= 6) {
+            resposta.innerHTML += '<br>Parabéns, aprovado(a)!';
+        } else {
+            resposta.innerHTML += '<br>Tente outra vez'
+        }
+
+    }
+</script>

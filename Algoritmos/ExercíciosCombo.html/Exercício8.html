@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício8</title>
+</head>
+<body>
+    <h1>Pode casar?</h1>
+    Quanto tempo você trabalhou para o pai da pretendente?
+    <br><input id="in_tempo" placeholder="Em anos">
+    <br>Qual foi o rendimento das suas plantações de trigo?
+    <br><input id="in_rendimento" placeholder="Em Kg">
+    <br>Quantas faltas você cometou no trabalho por estar doente?
+    <br><input id="in_faltas" placeholder="Em dias"><br>
+    <br><button onclick="Verificar()">Deu match?</button>
+    <br><div id="resultado"></div>
+    <img id="img" width="300px">
+</body>
+</html>
+
+<script>
+    var Tempo = 0;
+    var Rendimento = 0;
+    var Faltas = 0;
+     
+    function Verificar() {
+        Tempo= Number(in_tempo.value);
+        Rendimento= Number(in_rendimento.value);
+        Faltas= Number(in_faltas.value);
+
+        if (Tempo >=5 && Rendimento>= 300 && Faltas <= 5) {
+            resultado.innerHTML = 'Minha filha será sua!';
+            img.src = "https://static1.purepeople.com.br/articles/2/26/58/02/@/3024962-looks-para-inspirar-as-futuras-noivas-e-624x600-1.jpg";
+        } else {
+            resultado.innerHTML = 'Deu ruim! Trabalhe mais 2 anos';
+            img.src = "https://st2.depositphotos.com/1773655/5632/i/950/depositphotos_56329855-stock-photo-angry-man-accusing-you-pointing.jpg";
+        }
+    }
+</script>

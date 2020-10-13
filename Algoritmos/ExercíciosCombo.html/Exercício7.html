@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício7</title>
+</head>
+<body>
+    <h1>Vegano ou NÃO Vegano?</h1>
+    
+    O que você come no café da manhã?
+    <br><select id="in_cafemanha">
+        <option value="1">Ovos</option>
+        <option value="2">Leite de arroz</option>
+        <option value="3">Bacon</option>
+    </select>
+
+    <br>O que você come no almoço?
+    <br><select id="in_almoco">
+        <option value="1">Bife</option>
+        <option value="2">Hamburguer de soja</option>
+        <option value="3">Frango grelhado</option>
+    </select>
+
+    <br> O que você come na janta?
+    <br><select id="in_janta">
+        <option value="1">Picanha de soja</option>
+        <option value="2">Cupim</option>
+        <option value="3">Coração</option>
+    </select><br>
+    <br><button onclick="Vegano()">Sou vegano?</button>
+</body>
+</html>
+
+<script>
+    var Cafemanha = 0;
+    var Almoco = 0;
+    var Janta = 0;
+
+    function Vegano() {
+        Cafemanha= Number (in_cafemanha.value);
+        Almoco= Number(in_almoco.value);
+        Janta= Number(in_janta.value);
+
+        if (Cafemanha==2 && Almoco== 2 && Janta==1){
+            alert('Sim,você é vegano!');
+        } else {
+            alert('Não, você não é vegano!');
+        }
+    }
+</script>

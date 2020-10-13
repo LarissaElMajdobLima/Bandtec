@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="port-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício2</title>
+</head>
+<body>
+    Para qual dos grandes times de SP você torce?
+    <select id="in_times">
+        <option value= "https://logodetimes.com/times/corinthians/logo-corinthians-1536.png">Corinthians</option>
+        <option value="https://logodetimes.com/wp-content/uploads/santos-capa.jpg">Santos</option>
+        <option value="https://logodetimes.com/wp-content/uploads/sao-paulo-capa.jpg">São Paulo</option>
+        <option value="https://logodetimes.com/times/palmeiras/logo-palmeiras-2048.png">Palmeiras</option>
+    </select>
+
+    <br>
+    <button onclick="Ver()">Ver Escudo</button>
+    <br>
+    <img id="img_escudo" style="width: 500px;">  
+    <br>
+    <div id="resultado"></div>
+    
+    
+    <script>
+        function Ver() {
+        img_escudo.src = in_times.value;
+        }
+    </script>

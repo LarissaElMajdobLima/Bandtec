@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício8</title>
+</head>
+<body>
+    Qual o valor da pizza?
+    <input id="in_pizza">
+    <br>Qual é a quantidade de amigos reunidos?
+    <input id="in_amigos">
+
+    <br><button onclick="Calcular()">Rola a pizza?</button>
+    <div id="resposta"></div>
+    
+</body>
+</html>
+
+<script>
+    function Calcular() {
+        var Pizza = Number(in_pizza.value);
+        var Amigos = Number(in_amigos.value);
+        var Valor = Pizza / Amigos;
+
+        resposta.innerHTML += `<br><b>Cada amigo vai pagar R$ <i>${Valor.toFixed(2)}</i> pela pizza</b>`;
+
+        if (Valor > 20.00) {
+            resposta.innerHTML += '<br><b><i style="color:blue;">Deu ruim!Pizza muito cara!</i></b>';
+        }
+
+    }
+</script>

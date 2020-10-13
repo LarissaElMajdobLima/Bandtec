@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício10</title>
+</head>
+<body>
+    <h1>Metro de São Paulo-Passagens</h1>
+
+    <button onclick="passagens8()">08 passagens</button>
+    <button onclick="passagens20()">20 passagens</button>
+    <button onclick="passagens50()">50 passagens</button>
+    <br><div id="resultado"></div>
+    
+</body>
+</html>
+
+<script>
+   
+    function passagens8() {
+       var desconto = 32.45;
+       var Total = 35.20;
+       var Porcentagem = (desconto / Total);
+       Porcentagem -= 1;
+       Porcentagem *= 100;  
+       Bonus = (Total - desconto) / 4.40;
+       resultado.innerHTML = `Ao comprar <b>8</b> passagens, você pagou <b>${Porcentagem.toFixed(2)}%</b> a menos. É como se tivesse ganhado <b>${Bonus.toFixed(1)}</b> passagens de "bônus"`;
+    }
+    function passagens20() {
+       var desconto = 78.65;
+       var Total = 88.00;
+       var Porcentagem = (desconto / Total);
+       Porcentagem -= 1;
+       Porcentagem *= 100;  
+       Bonus = (Total - desconto) / 4.40;
+       resultado.innerHTML = `Ao comprar <b>20</b> passagens, você pagou <b>${Porcentagem.toFixed(2)}%</b> a menos. É como se tivesse ganhado <b>${Bonus.toFixed(1)}</b> passagens de "bônus"`;
+    }
+    function passagens50() {
+       var desconto = 191.41;
+       var Total = 220.00;
+       var Porcentagem = (desconto / Total);
+       Porcentagem -= 1;
+       Porcentagem *= 100;  
+       Bonus = (Total - desconto) / 4.40;
+       resultado.innerHTML = `Ao comprar <b>50</b> passagens, você pagou <b>${Porcentagem.toFixed(2)}%</b> a menos. É como se tivesse ganhado <b>${Bonus.toFixed(1)}</b> passagens de "bônus"`;
+    }
+</script>

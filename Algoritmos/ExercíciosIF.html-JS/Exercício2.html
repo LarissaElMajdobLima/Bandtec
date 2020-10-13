@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício2</title>
+</head>
+<body>
+   
+    
+    <h1>Cálculo de Seguro de Carros</h1>
+     Quantas infrações já foram cometidas?
+     <input id="infracoes">
+     <br>Qual o valor do carro?
+     <input id="valor_carro">
+     <br><button onclick="Calcular()">Calcular Seguro</button>
+     <br><div id="resultado"></div>
+</body>
+</html>
+
+<script>
+    function Calcular() {
+        var infracoes1 = Number(infracoes.value);
+        var carro = Number(valor_carro.value);
+        var seguro= carro * 0.015;
+
+        if (infracoes1 < 3){
+            seguro = seguro * 0.9;
+        } 
+        resultado.innerHTML = `<br>O valor do seguro será de: R$ ${seguro.toFixed(2)}`;
+    }
+</script>
